@@ -1,0 +1,30 @@
+.hero {
+    background: url("../img/photos/photo4.jpg") no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+    margin-bottom: 1rem;
+    padding: 1.5rem 3rem;
+}
+.hero .info {
+    float: right;
+    margin-top: 47vh;
+}
+.hero .info .attribution {
+    color: rgb(235, 236, 237);
+    font-family: "Ubuntu";
+    font-size: 0.95rem;
+    float: left;
+    text-align: right;
+}
+.hero .info .attribution b {
+    color: rgb(73, 85, 96);
+    display: block;
+    font-weight: 500;
+}
+.hero .info .avatar {
+    border-radius: 50%;
+    float: right;
+    height: 50px;
+    margin-left: 1rem;
+    width: 50px;
+}
