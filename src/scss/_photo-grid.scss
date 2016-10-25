@@ -1,0 +1,49 @@
+.image-grid {
+    padding: 0 3rem;
+}
+.image-grid h2 {
+    color: rgb(73, 85, 96);
+    font-family: "Arvo";
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: normal;
+}
+.image-grid .row {
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+.image-grid .columns {
+    padding-left: 0;
+}
+
+.image-grid .image a {
+    border-radius: .5rem .5rem 0 0;
+    /* max-height: 15rem; */
+    /* min-height: 15rem; */
+    display: block;
+    min-width: 100%;
+    overflow: hidden;
+}
+.image-grid .image .info {
+    background-color: #fff;
+    border-bottom: 2px solid;
+    border-bottom-color: rgb(123, 136, 149);
+    border-radius: 0 0 .5rem .5rem;
+    padding: 1rem;
+}
+.image-grid .image .info .attribution {
+    color: rgb(73, 85, 96);
+    font-family: "Ubuntu";
+    font-size: 0.95rem;
+}
+.image-grid .image .info .attribution b {
+    display: block;
+    font-weight: 500;
+}
+.image-grid .image .info .avatar {
+    border-radius: 50%;
+    float: left;
+    height: 50px;
+    margin-right: 1rem;
+    width: 50px;
+}
