@@ -10,7 +10,6 @@ var  gulp = require('gulp'),
 minifyCss = require('gulp-clean-css'),
  imagemin = require('gulp-imagemin'),
    sprity = require('sprity');
-var uncss = require('gulp-uncss');
 
 var options = {
     src: 'src',
