@@ -7403,8 +7403,15 @@ body {
   .logo {
     float: left; } }
 
+.avatar {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-image: url(../img/avatars/avatar-sprite.jpg);
+  background-size: 150px; }
+
 .hero {
-  background: url("../img/photos/photo4.jpg") no-repeat center center;
+  background: url("../img/photos/header.jpg") no-repeat center center;
   background-size: cover;
   height: 60vh;
   margin-bottom: 1rem;
@@ -7423,11 +7430,8 @@ body {
         display: block;
         font-weight: 500; }
     .hero .info .avatar {
-      border-radius: 50%;
       float: right;
-      height: 50px;
-      margin-left: 1rem;
-      width: 50px; }
+      margin-left: 1rem; }
 
 .image-grid {
   padding: 0 3rem; }
@@ -7471,11 +7475,8 @@ body {
   font-weight: 500; }
 
 .image-grid .image .info .avatar {
-  border-radius: 50%;
   float: left;
-  height: 50px;
-  margin-right: 1rem;
-  width: 50px; }
+  margin-right: 1rem; }
 
 .reveal-modal .info {
   padding: 2rem 1rem 0; }

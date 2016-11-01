@@ -1,5 +1,5 @@
 .hero {
-    background: url("../img/photos/photo4.jpg") no-repeat center center;
+    background: url("../img/photos/header.jpg") no-repeat center center;
     background-size: cover;
     height: 60vh;
     margin-bottom: 1rem;
@@ -20,11 +20,8 @@
             }
         }
         .avatar {
-            border-radius: 50%;
             float: right;
-            height: 50px;
             margin-left: 1rem;
-            width: 50px;
         }
     }
 }

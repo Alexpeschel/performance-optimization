@@ -7,8 +7,10 @@ var  gulp = require('gulp'),
       del = require('del'),
    useref = require('gulp-useref'),
    gulpif = require('gulp-if'),
-     minifyCss = require('gulp-clean-css'),
- imagemin = require('gulp-imagemin');
+minifyCss = require('gulp-clean-css'),
+ imagemin = require('gulp-imagemin'),
+   sprity = require('sprity');
+var uncss = require('gulp-uncss');
 
 var options = {
     src: 'src',
@@ -25,6 +27,14 @@ gulp.task('compileSass', function() {
 
 gulp.task('watchFiles', function() {
   gulp.watch(options.src + '/scss/**/*.scss', ['compileSass']);
+});
+
+gulp.task('uncss', function () {
+    return gulp.src(options.src + '/css/main.css')
+        .pipe(uncss({
+            html: [options.src + '/index.html']
+        }))
+        .pipe(gulp.dest(options.src + '/css/out'));
 });
 
 gulp.task('jpgs', function() {
@@ -44,9 +54,17 @@ gulp.task('html', ['compileSass'], function() {
       .pipe(gulp.dest(options.dist));
 });
 
+gulp.task('sprites', function () {
+  return sprity.src({
+    src: './src/img/avatars/*.jpg',
+    style: './src/css/sprite.css',
+  })
+  .pipe(gulpif('*.jpg', gulp.dest('./src/img/avatars'), gulp.dest('./src/css')))
+});
+
 gulp.task("build", ['compileSass'], function() {
   return gulp.src(["css/main.css", "index.html", "img/**/*"], { base: './'})
-             .pipe(gulp.dest('optimization-testing/public'));
+             .pipe(gulp.dest(options.dist));
 });
 
 gulp.task("serve", ['watchFiles']);
